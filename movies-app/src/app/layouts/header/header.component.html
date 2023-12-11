@@ -1,0 +1,36 @@
+<div class="container" [ngStyle]="navbg">
+  <div class="logo">
+    <img
+      src="/assets/images/logo.jpg"
+      alt="logo"
+      width="150px"
+      height="70px"
+      class="img-logo"
+      loading="laze"
+      routerLink="/"
+    />
+  </div>
+  <div class="input-container">
+    <div class="message-container">
+      <form class="form-div" [formGroup]="searchForm">
+        <div class="input-div">
+          <input
+            type="text"
+            pInputText
+            class="p-inputtext-sm input"
+            placeholder="Find a movie"
+            formControlName="movieName"
+            appDarkening
+            (focus)="onInputFocused()"
+          />
+        </div>
+      </form>
+    </div>
+    <app-filter-by-input
+      (close)="openSearchPopUp = false"
+      *ngIf="openSearchPopUp"
+      [searchFormValue]="searchForm"
+    ></app-filter-by-input>
+  </div>
+ <app-nav></app-nav>
+</div>

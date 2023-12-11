@@ -1,0 +1,32 @@
+<nav>
+  <ul>
+    <li>
+      <a
+        routerLink="/nav/category/popular"
+        [queryParams]="{ page: 1 }"
+        [routerLinkActive]="'active'"
+        (click)="changeCategory('popular')"
+        >POPULAR MOVIES</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/nav/category/top_rated"
+        [queryParams]="{ page: 1 }"
+        [routerLinkActive]="'active'"
+        (click)="changeCategory('top_rated')"
+        >TOP RATED</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/nav/category/upcoming"
+        [queryParams]="{ page: 1 }"
+        [routerLinkActive]="'active'"
+        (click)="changeCategory('upcoming')"
+        >UPCOMING</a
+      >
+    </li>
+  </ul>
+</nav>
+

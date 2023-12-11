@@ -1,0 +1,26 @@
+ul {
+  display: flex;
+  gap: 20px;
+}
+li {
+  list-style: none;
+}
+ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+ul li a:hover {
+  color: #007bff;
+}
+
+
+
+.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  transition: color 0.3s ease, border-bottom 0.3s ease; 
+}

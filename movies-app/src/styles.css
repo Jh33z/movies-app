@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --theme-color: rgb(72, 42, 42);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--theme-color);
+  height: 100%;
+  margin: 0;
+}
+
+.darken {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  opacity: 0.5;
+}
+
+/* scrollbar start*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ab2727;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #322828;
+}
+
+/* scrollbar end*/

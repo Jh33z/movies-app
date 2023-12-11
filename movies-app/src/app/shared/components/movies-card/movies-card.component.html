@@ -1,0 +1,40 @@
+<div
+  class="inner-div"
+  (mouseenter)="showOverview = true"
+  (mouseleave)="showOverview = false"
+>
+  <div class="photo-img" *ngIf="movie.poster_path !== null; else defaultImage">
+    <img
+      [src]="'https://image.tmdb.org/t/p/original' + movie.poster_path"
+      alt="movie-image"
+      loading="lazy"
+      class="img"
+      [routerLink]="['/view-movie', movie.id]"
+    />
+  </div>
+  <ng-template #defaultImage>
+    <img
+      src="/assets/images/default-movie.jpg"
+      alt="Default Image"
+      loading="lazy"
+      class="img"
+      [routerLink]="['/view-movie', movie.id]"
+    />
+  </ng-template>
+  <div
+    class="info-p overview"
+    [ngStyle]="{ opacity: showOverview ? '1' : '0' }"
+  >
+    <p>
+      {{
+        showFullOverview ? movie.overview : (movie.overview | slice : 0 : 10)
+      }}
+    </p>
+    <button (click)="toggleShowMore()">
+      Show {{ showFullOverview ? "Less" : "More" }}
+    </button>
+  </div>
+  <div class="info-p">
+    <p class="title">{{ movie.title }}</p>
+  </div>
+</div>

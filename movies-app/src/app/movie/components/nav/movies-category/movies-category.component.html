@@ -1,0 +1,7 @@
+<div class="container">
+  <app-movies-card
+    *ngFor="let movie of moviesArr"
+    [movie]="movie"
+  ></app-movies-card>
+  <app-pagination (catchPageNum)="pagination($event)"></app-pagination>
+</div>

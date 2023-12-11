@@ -1,0 +1,8 @@
+<div class="container" (click)="closePopup()">
+    <div class="filtered-movies" *ngIf="searchResult" (click)="$event.stopPropagation()">
+        <p-message severity="warn" text="Can't find a movie" class="movies-container" *ngIf="!searchResult === null || searchResult?.length === 0"></p-message>
+         <div class="movies-container" *ngIf="searchResult" >
+             <app-movies-card *ngFor="let movie of searchResult" [movie]="movie"  appFilteredCard [ngStyle]="{'box-shadow': '8px 0 16px rgba(218, 28, 28, 0.959)'}"></app-movies-card>
+         </div>
+     </div>
+</div>

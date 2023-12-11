@@ -1,0 +1,44 @@
+.container {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-logo {
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+
+
+.search-input {
+  padding: 10px 20px;
+  width: 1000px;
+  background: var(--theme-color);
+  color: #fff;
+}
+.search-input::placeholder {
+  color: #fff;
+}
+.input {
+  min-width: 1000px;
+  padding: 12px;
+  border-radius: 10px;
+  z-index: 99999;
+}
+button {
+  padding: 12px 0;
+  width: 100px;
+  border-radius: 10px;
+}
+.input-div {
+  display: flex;
+  gap: 30px;
+}
+
+.message-container {
+  position: relative;
+}
